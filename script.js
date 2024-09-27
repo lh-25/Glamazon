@@ -17,10 +17,12 @@ const getProductName = async (productName) => {
         const productTags = productData[i].tag_list.length > 0 ?
         productData[i].tag_list.join(",") : 'No tags available'
         const productImage = productData[i].api_featured_image
-        const productLink = productData[i].product_link
+        const productDescription = productData[i].description
+        const productColors = productData[i].product_colors.length > 0 ?
+        productData[i].product_colors.map(color => color.colour_name).join(",") : 'No colors available'
 
         productDiv.innerHTML = `<img src="${productImage}" alt="${productName}">
-        <h3> ${productName}</h3> <p>${brandName}</p> <p>${productTags}</p> <a href="${productLink}" target="_blank>Buy Here</a>`
+        <h3> ${productName}</h3> <p>${brandName}</p> <p>${productTags}</p>  <p><strong>Description:</strong> ${productDescription}</p>  <p>${productColors}</p>`
         resultsGrid.appendChild(productDiv)
     }
     } 
