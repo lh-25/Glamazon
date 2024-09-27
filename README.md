@@ -4,6 +4,12 @@ This project is a simple webpage that allows users to search for makeup products
 
 ## Features
 **Search for Products**: Users can search for makeup products using the product name
-**Display Information**
+### Display Information 
+**Name** of product
+**Brand** that manufactures the product
+**Tags** associated with the product (e.g., cruelty-free, vegan)
+**Image** of the product
+**Link to purchase** the product online
+
 
 
