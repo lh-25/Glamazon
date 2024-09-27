@@ -40,7 +40,13 @@ const getProductName = async (productName) => {
     let product = await axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productName}`)
      productData = product.data 
 ```
-
+## JavaScript Code Snippet
+This code uses the `innerHTML` element to add a productDiv with all the product information to the HTML through JavaScript
+```
+ productDiv.innerHTML = `<img src="${productImage}" alt="${productName}">
+        <h3> ${productName}</h3> <p>${brandName}</p> <p>${productTags}</p> <a href="${productLink}" target="_blank>Buy Here</a>`
+        resultsGrid.appendChild(productDiv)
+```
 ## CSS WireFrame/Design Mockup
 ![Glamazon-Page](https://github.com/user-attachments/assets/48a72c04-2bab-4929-b2c5-15133d472fa2)
 
