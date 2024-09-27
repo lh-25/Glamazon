@@ -1,1 +1,85 @@
+body {
+    background: linear-gradient(180deg,#ff99cc, #ff33cc, #9900cc);
+    font-family: fantasy;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: bold; 
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    margin-right: 10px ;
+    background-color: #ffccff;
+    color: black;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f5a2e0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover {
+    background-color: #ff99cc;
+}
+
+.results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color: #ff99cc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    color: black;
+}
+.result-item img {
+    width: 100%;
+}
+.result-item h3 {
+    font-size: 1.2em;
+}
+.result-item  p {
+    font-size: 1em;
+}
+.result-item  a {
+    font-size: 1em;
+}
+.result-item a:hover {
+    color: #ff66b2;
+}
 
