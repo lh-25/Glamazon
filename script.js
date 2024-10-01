@@ -36,11 +36,45 @@ const getProductName = async (productName) => {
 }
 const getBrand = async (brandName) => {
     let brand = await axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brandName}`)
+
+    const brandData = brand.data
+    resultsGrid.innerHTML= " "
+    if (brandData.length > 0) {
+        for (let i = 0; i < brandData.length; i++) {
+            // Created a div to go into the html with all the product info 
+            const productDiv = document.createElement('div')
+            productDiv.classList.add('result-item')
     
+            // used ternary statements so if something isnt avalible alt text will appear
+            const productName = brandData[i].name ? brandData[i].name : 'Product name not avalible'
+            const brandName = brandData[i].brand ? brandData[i].brand : 'Brand not avaliable'
+            const productTags = brandData[i].tag_list.length > 0 ?
+            brandData[i].tag_list.join(",") : 'No tags available'
+            const productImage = brandData[i].api_featured_image ? brandData[i].api_featured_image : 'Product image not avalible'
+            const productDescription = brandData[i].description ? brandData[i].description : 'Description not avalible'
+            // used map() inorder to get each color option in the array or color objects and join() to convert to a single string
+            const productColors = brandData[i].product_colors.length > 0 ?
+            brandData[i].product_colors.map(color => color.colour_name).join(",") : 'Colors not available'
+    
+            productDiv.innerHTML = `<img src="${productImage}" alt="${productName}">
+            <h3> ${productName}</h3> <p>${brandName}</p> <p>${productTags}</p>  <p><strong>Description:</strong> ${productDescription}</p>  <p>${productColors}</p>`
+            resultsGrid.appendChild(productDiv)
+        }
+        } 
 }
 search.addEventListener('click', () => {
      getProductName(input.value)
 
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+    const brandButton = document.querySelectorAll('.brandList li')
+    brandButton.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const brandName = event.target.textContent.toLowerCase()
+            getBrand(brandName)
+        })
+    })
 })
 //added keypress as an event listener so you dont have to press the search bar all the time 
 
