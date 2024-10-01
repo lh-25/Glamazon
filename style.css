@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff99cc;
+    background-color: #99d6ff;
 }
 
 .results-grid {
@@ -56,30 +56,40 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+    
 }
 
 .result-item {
-    background-color: #ff99cc;
-    border-radius: 10px;
+    background-color:#f5a2e0;
+    border: 10px solid rgb(221, 156, 110);
+    border-radius: 15px;
     padding: 20px;
-    margin: 10px;
+    margin: 15px;
     width: 250px;
     text-align: center;
     color: black;
+    max-height:fit-content;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.result-item :hover {
+ transform: scale(1.05);
+ box-shadow: 0 8px 16px rgba(0,0,0, 0.2);
+ background-color: #ff66b2;
 }
 .result-item img {
     width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 .result-item h3 {
     font-size: 1.2em;
+    margin: 10px 0;
 }
 .result-item  p {
     font-size: 1em;
-}
-.result-item  a {
-    font-size: 1em;
-}
-.result-item a:hover {
-    color: #ff66b2;
+    word-wrap: break-word;
+    margin: 10px 0;
 }
 
