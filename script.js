@@ -32,3 +32,9 @@ search.addEventListener('click', () => {
      getProductName(input.value)
 
 })
+
+input.addEventListener ('keypress', (event) => {
+    if (event.key === 'Enter') {
+        getProductName(input.value)
+    }
+})
