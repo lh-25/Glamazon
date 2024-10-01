@@ -34,7 +34,10 @@ const getProductName = async (productName) => {
     }
     } 
 }
-
+const getBrand = async (brandName) => {
+    let brand = await axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brandName}`)
+    
+}
 search.addEventListener('click', () => {
      getProductName(input.value)
 

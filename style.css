@@ -93,3 +93,11 @@ button:hover {
     margin: 10px 0;
 }
 
+.header ul {
+display: flex;
+flex-direction:row;
+justify-content: space-around;
+list-style-type: none;
+padding: 0;
+    
+}
