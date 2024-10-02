@@ -25,27 +25,28 @@ This project is a simple webpage that allows users to search for makeup products
 
 ## HTML Product Display
 ```
-<div class="results">
-         <img id="productImage" src="" alt="Product Image">
-         <h3 id="product-type"></h3>
-        <p id="brand"></p>
-        <p id="product-tag"></p>
-        <a id="purchase-link" href="" target="_blank">Buy Here</a>
-    </div>        
+ <div 
+ class="results-grid" id="resultsGrid">
+    </div>     
 ```
 
 ## API Request
 ```
 const getProductName = async (productName) => {
     let product = await axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productName}`)
-     productData = product.data 
+     productData = product.data }
 ```
 ## JavaScript Code Snippet
 This code uses the `innerHTML` element to add a productDiv with all the product information to the HTML through JavaScript
 ```
- productDiv.innerHTML = `<img src="${productImage}" alt="${productName}">
-        <h3> ${productName}</h3> <p>${brandName}</p> <p>${productTags}</p> <a href="${productLink}" target="_blank>Buy Here</a>`
-        resultsGrid.appendChild(productDiv)
+ const initialInfo = `<img src="${productImage}" alt="${productName}">
+            <h3> ${productName}</h3> <p>${brandName}</p>`
+
+            const extraInfo = `<div class="extra-info"> <p>${productTags}</p>  <p><strong>Description:</strong> ${productDescription}</p> <p>${productColors}</p> </div>`
+
+            productDiv.innerHTML = initialInfo + extraInfo
+
+            resultsGrid.appendChild(productDiv)
 ```
 ## CSS WireFrame/Design Mockup
 ![Glamazon-Page](https://github.com/user-attachments/assets/48a72c04-2bab-4929-b2c5-15133d472fa2)
