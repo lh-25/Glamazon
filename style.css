@@ -9,7 +9,7 @@ body {
    font-family:"Modak", system-ui;
    font-weight: lighter;
     font-size: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #000000;
     text-shadow: 5px 5px 5px #cf49f5;
     -webkit-text-stroke: .5px silver;
@@ -78,6 +78,7 @@ input {
     margin-right: 10px ;
     background-color: #ffccff;
     color: black;
+    text-align: center;
 }
 
 button {
@@ -151,4 +152,171 @@ font-family: "Poppins", sans-serif;
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    #glamazon h2 {
+        font-size: 60px;
+    }
+    .sub-header {
+        font-size: 32px;
+    }
+    .header ul {
+        font-size: 25px;
+    }
+    .results-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .result-item {
+        width: 250px;
+        margin: 10px;
+    }
+    input {
+        width: 350px;
+    }
+    button {
+        padding: 12px 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 14px;
+    }
+    #glamazon h2 {
+        font-size: 50px;
+    }
+    .sub-header {
+        font-size: 28px;
+    }
+    .header ul {
+        font-size: 22px;
+    }
+    .results-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .result-item {
+        width:20%;
+        margin: 10px;
+    }
+    input {
+        width: 80%;
+    }
+    button {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 12px;
+    }
+    #glamazon h2 {
+        font-size: 40px;
+    }
+    .sub-header {
+        font-size: 24px;
+    }
+    .header ul {
+        font-size: 20px;
+    }
+    .star3, .star2 {
+        width: 50px;
+    }
+    .results-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .result-item {
+        width: 26%;
+        margin: 10px;
+    }
+    input {
+        width: 80%;
+    }
+    button {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+    #glamazon h2 {
+        font-size: 28px;
+    }
+    .sub-header {
+        font-size: 20px;
+    }
+    .header ul {
+        flex-direction: column;
+        font-size: 18px;
+    }
+    .star3, .star2 {
+        width: 50px;
+    }
+    .container {
+        padding: 30px;
+    }
+    .results-grid {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .result-item {
+        width: 30%;
+        margin: 10px;
+    }
+    input {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 9px;
+    }
+    #glamazon h2 {
+        font-size: 22px;
+    }
+    .sub-header {
+        font-size: 16px;
+    }
+    .header ul {
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .star3, .star2 {
+        width: 50px;
+    }
+    .container {
+        padding: 30px;
+    }
+    .results-grid {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .result-item {
+        width: 30%;
+        margin: 5px;
+    }
+    input {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+
+
 
