@@ -1,19 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Poppins:ital,wght@0,400;1,100&family=Rubik+Glitch&display=swap');
+
 body {
     background: linear-gradient(to left, #ff33cc,#f5a2e0 ,#9900cc);
-    font-family: fantasy;
     color: white;
     text-align: center;
 }
 #glamazon h2 {
-   
+   font-family:"Modak", system-ui;
+   font-weight: lighter;
     font-size: 50px;
     margin-bottom: 10px;
-    color: #f5a2e0;
-    text-shadow: 3px 3px 5px #cf49f5;
-    top: 30px;
-    left: 60px;
-    -webkit-text-stroke: .5px #99d6ff;
-    
+    color: #000000;
+    text-shadow: 5px 5px 5px #cf49f5;
+    -webkit-text-stroke: .5px silver;
 }
 .star3 {
     width: 70px;
@@ -33,32 +32,32 @@ cursor: pointer;
 }
 
 .header ul {
-    
+    font-family: "Rubik Glitch", system-ui;
     font-size: 25px;
-    color:antiquewhite;
+    color:black;
     transition: color 0.3 ease;
+    text-shadow: 3px 3px 5px #cf49f5;
+    -webkit-text-stroke: .2px #ffccff;
 }
 
 .header ul :hover {
-    color: black;
+    color:rgb(255, 255, 255);
     text-decoration: underline;
 }
 .container {
     padding: 50px 20px;
 }
 
-
-
 .sub-header {
+    font-family: "Rubik Glitch", system-ui;
     font-size: 32px;
-    font-weight: bold;
     margin-bottom: 10px;
-    color: #f5a2e0;
+    color: #000000;
     text-shadow: 3px 3px 5px #cf49f5;
+    -webkit-text-stroke: .2px #ffccff;
 }
 h3 {
     font-size: 32px;
-    font-weight: bold;
     margin-bottom: 10px;
     color: black;
 }
@@ -70,6 +69,7 @@ h3 {
 }
 
 input {
+    font-family: "Poppins", sans-serif;
     padding: 10px;
     width: 300px;
     border-radius: 5px;
@@ -103,8 +103,9 @@ button:hover {
 }
 
 .result-item {
- background-color: #f5a2e0;
- border: 5px solid #cf49f5; 
+font-family: "Poppins", sans-serif;
+ background-color: #ed85d3;
+ border: 5px solid #feb4ff; 
  border-radius: 10px;
  padding: 10px;
  margin: 10px;
